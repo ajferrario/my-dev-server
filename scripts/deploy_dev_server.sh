@@ -4,8 +4,8 @@ set -e
 
 # Directory paths
 SCRIPT_DIR=$(dirname $(realpath "$0"))
-STATE_DIR="$(dirname $(dirname $SCRIPT_DIR))/state"
-TEMPLATE_DIR="$(dirname $(dirname $SCRIPT_DIR))/infrastructure/dev"
+STATE_DIR="$(dirname $SCRIPT_DIR)/state"
+TEMPLATE_DIR="$(dirname $SCRIPT_DIR)/infrastructure"
 
 # Function to display usage
 usage() {
