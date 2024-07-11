@@ -138,3 +138,5 @@ echo "Writing state file at: $STATE_PATH"
   echo "KEY_FILE_PATH=\"$KEY_FILE_PATH\""
 } > "$STATE_PATH"
 echo "Stack information written to state file"
+
+bash $SCRIPT_DIR/use_dev_server.sh

@@ -4,7 +4,7 @@ set -e
 
 # Directory paths
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
-STATE_DIR="$(dirname "$(dirname "$SCRIPT_DIR")")/state"
+STATE_DIR="$(dirname "$SCRIPT_DIR")/state"
 
 # Function to display usage
 usage() {
@@ -154,10 +154,5 @@ fi
 # Ensure the ssh-agent is running
 eval "$(ssh-agent -s)"
 ssh-add "$KEY_FILE_PATH"
-
-echo ""
-echo "INSTRUCTIONS"
-echo "====================================================================================="
-echo "1 - Install SSH plugin or go to Remote Explorer's SSH section."
-echo "2 - Select SSH config file location if needed."
-echo "3 - Activate dev-server-[YOUR_HOSTNAME] SSH"
+code --install-extension ms-vscode-remote.remote-ssh
+code --remote ssh-remote+$DEPLOYMENT_NAME
