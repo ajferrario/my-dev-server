@@ -1,0 +1,2 @@
+# Don't keep any of our local state files
+state/*/*
